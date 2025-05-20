@@ -8,4 +8,4 @@ WORKDIR /app
 COPY app.py .
 
 # Command to run the Python script
-CMD ["python", "app.py"]
+CMD ["python", "app/main.py"]

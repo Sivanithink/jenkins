@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t saireddie45/app1 .'
+                sh 'docker build -t sivanithink/app1 .'
             }
         }
  
@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh '''
                     docker rm -f app1-container || true
-                    docker run -d -p 8009:8080 --name app1-container saireddie45/app1
+                    docker run -d -p 8009:8080 --name app1-container sivanithink/app1
                 '''
             }
         }
